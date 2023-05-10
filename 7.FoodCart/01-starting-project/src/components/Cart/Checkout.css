@@ -1,0 +1,10 @@
+.form {
+    margin: 1rem 0;
+    height: 19rem;
+    overflow: auto;
+  }
+
+.ErrorMsg{
+  margin: 4px 0px;
+  color : red;
+}
