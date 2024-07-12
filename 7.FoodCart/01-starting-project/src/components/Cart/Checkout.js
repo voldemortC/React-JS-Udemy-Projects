@@ -34,15 +34,14 @@ function Checkout(props) {
     } = useForm(value => value?.trim() !== '');
 
     const {
-        inputFeild : city,
-        inputFeildHandler : cityHandler,
+        value : city,
+        valueChangeHandler : cityHandler,
         inputBlurHandler : cityBlurHandler,
         valueIsValid : cityIsValid,
         hasError : cityHasError,
         reset : cityReset,
 
     } = useForm(value => value?.trim() !== '');
-
     const formValid = yournameIsValid && streetIsValid && postalcodeIsValid && cityIsValid;
 
     const onSubmitHandler = (e) => {
@@ -50,12 +49,12 @@ function Checkout(props) {
         if(formValid){
             return;
         }
-        props.onConfirm({
-            yourname,
-            street,
-            postalcode,
-            city,
-        });
+        // props.onConfirm({
+        //     yourname,
+        //     street,
+        //     postalcode,
+        //     city,
+        // });
         yourNameReset();
         streetReset();
         postalcodeReset();
@@ -63,7 +62,6 @@ function Checkout(props) {
         
     }
     
-   console.log();
     return(
         <form className={styles.form} onSubmit = {onSubmitHandler}>
             <Input

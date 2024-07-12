@@ -28,7 +28,7 @@ export default function HeaderCartButton(props){
             return currNum + item.amount;
         },0)
     }
-    return(
+    return( 
         <button className = {`button ${!buttonhighlighted ? 'bump' : ''}`} onClick = {props.onClick}>
             <span className= "icon"><CartIcon /></span>
             <span>Your Cart</span>
